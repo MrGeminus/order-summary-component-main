@@ -58,6 +58,6 @@ Besides getting better in the area of accessibility and SEO, I would also like t
 
 ## Author
 
-- Website - [Uros Tomic](https://mrgeminus.com/)
+- Website - [MrGeminus](https://mrgeminus.com/)
 - Frontend Mentor - [@MrGeminus](https://www.frontendmentor.io/profile/MrGeminus)
 - Twitter - [@MrGeminus](https://twitter.com/MrGeminus)
