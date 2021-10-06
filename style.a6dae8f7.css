@@ -6,17 +6,17 @@
 -----------------------------------------------------------------*/
 @font-face {
   font-family: "Red Hat Display";
-  src: url(/RedHatDisplay-Medium.523162a4.ttf) format("TrueType");
+  src: url(RedHatDisplay-Medium.523162a4.ttf) format("TrueType");
   font-weight: 500;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url(/RedHatDisplay-Bold.b66f3fe4.ttf) format("TrueType");
+  src: url(RedHatDisplay-Bold.b66f3fe4.ttf) format("TrueType");
   font-weight: 700;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url(/RedHatDisplay-Black.5dcfa361.ttf) format("TrueType");
+  src: url(RedHatDisplay-Black.5dcfa361.ttf) format("TrueType");
   font-weight: 900;
 }
 /*-----------------------------------------------------------------
@@ -74,14 +74,14 @@
   justify-content: center;
   flex-grow: 1;
   padding: 4.5rem 1.5rem;
-  background-image: url(/pattern-background-mobile.e01d1c6d.svg);
+  background-image: url(pattern-background-mobile.e01d1c6d.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top center;
 }
 @media (min-width: 90rem) {
   .page-main {
-    background-image: url(/pattern-background-desktop.965ee378.svg);
+    background-image: url(pattern-background-desktop.965ee378.svg);
   }
 }
 .page-footer {
