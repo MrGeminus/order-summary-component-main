@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./img/order-summary-card.png)
+![](src/img/order-summary-card.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/bem-sass-html5-mobilefirstworkflow-flexbox-parcel-ePVWuT8vJ#comment-615e050c0f48541b104c3509](https://www.frontendmentor.io/solutions/bem-sass-html5-mobilefirstworkflow-flexbox-parcel-ePVWuT8vJ#comment-615e050c0f48541b104c3509)
+- Live Site URL: [https://mrgeminus.github.io/order-summary-component-main/](https://mrgeminus.github.io/order-summary-component-main/)
 
 ## My process
 
