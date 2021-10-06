@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solution to the order summary card challenge on Frontend Mentor">
+  <meta name="keywords" content="Frontend Mentor challenge, Order summary card challenge">
+  <meta name="author" content="MrGeminus">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="stylesheet" href="/scss/style.scss">
+  <title>Frontend Mentor | Order summary card</title>
+</head>
+
+<body class="page">
+  <!-- The container containing the main content starts here -->
+  <main class="page-main">
+    <!-- The order summary card component starts here -->
+    <article class="card">
+      <!-- The aside content which is indirectly related to the card's content -->
+      <aside class="card__aside">
+        <!-- Cards illustration container starts here -->
+        <figure class="card__figure">
+          <!-- Cards illustration -->
+          <img class="card__ilustration" src="img/illustration-hero.svg"
+            alt="An illustration of a long-haired person in a black long sleeve T-shirt and green short sleeve T-shirt listening to music using black wired headphones plugged into a mobile phone">
+          <figcaption class="sr-only">An illustration of a long-haired person in a black long sleeve T-shirt and green
+            short sleeve T-shirt listening to music using black wired headphones plugged into a mobile phone
+          </figcaption>
+        </figure>
+        <!-- Cards illustration container ends here -->
+      </aside>
+      <!-- Cards header starts here -->
+      <header class="card__header">
+        <h1 class="card__title">Order Summary</h1>
+        <P class="card__short_description">You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!</P>
+      </header>
+      <!-- Cards header ends here -->
+      <!-- Cards main content starts here -->
+      <div class="card__main">
+        <!-- Cards subscription container starts here -->
+        <div class="card__subscription">
+          <img src="img/icon-music.svg" alt="Subscription icon">
+          <dl class="card__subscription-details">
+            <dt class="card__subscription-type">Annual Plan</dt>
+            <dd class="card__subscription-price">$59.99/year</dd>
+          </dl>
+          <!-- Butten that changes the subscription plan -->
+          <button class="call-to-action card__change-button" type="button">Change</button>
+        </div>
+        <!-- Cards subscription container ends here -->
+      </div>
+      <!-- Cards main content ends here -->
+      <!-- Cards footer starts here -->
+      <footer class="card__footer">
+        <!-- Proceed button -->
+        <a class="call-to-action card__proceed-link" href="#">Proceed to Payment</a>
+        <!-- Cancel order button -->
+        <button class="call-to-action card__cancel-button" type="button">Cancel Order</button>
+      </footer>
+      <!-- Cards footer ends here -->
+    </article>
+    <!-- The order summary card component ends here -->
+  </main>
+  <!-- The container containing the main content ends here -->
+  <!-- The main footer starts here -->
+  <footer class="page-footer">
+    <p class="page-footer__attribution">
+      Challenge by
+      <a class="page-footer__attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>.
+    </p>
+    <p class="page-footer__attribution page-footer__attribution--has-margin">
+      Coded by
+      <a class="page-footer__attribution-link" href="https://mrgeminus.com/" target="_blank">MrGeminus</a>.
+    </p>
+  </footer>
+  <!-- The main footer ends here -->
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+/*-----------------------------------------------------------------
+	SCSS Files Imports
+-----------------------------------------------------------------*/
+
+@use './breakpoints'; 
+
+/*-----------------------------------------------------------------
+	Font Import
+-----------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(../fonts/RedHatDisplay-Medium.ttf) format("TrueType");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(../fonts/RedHatDisplay-Bold.ttf) format("TrueType");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(../fonts/RedHatDisplay-Black.ttf) format("TrueType");
+    font-weight: 900;
+}
+
+/*-----------------------------------------------------------------
+	Variables Definition
+-----------------------------------------------------------------*/
+
+$page-background: hsl(225, 100%, 94%);
+$card-background: hsl(0, 0%, 100%);
+$card-shadow: hsla(228, 87%, 40%, 0.17);
+$subscription-background: hsl(225, 100%, 98%);
+$cta-base: transparent;
+$cta-primary: hsl(245, 75%, 52%);
+$cta-primary-hover: hsl(245, 83%, 68%);
+$cta-shadow: hsla(245, 75%, 52%, 0.192);
+$primary-text: hsl(224, 23%, 55%);
+$secondary-text: hsl(225, 100%, 98%);
+$tertiary-text: hsl(223, 47%, 23%);
+
+/*-----------------------------------------------------------------
+	Global Styling
+-----------------------------------------------------------------*/
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.call-to-action {
+    display: inline-block;
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: $cta-base;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    @include breakpoints.breakpoint(desktop) { 
+        font-weight: 900;
+    }
+}
+
+// Visible only to screen readers
+
+.sr-only {
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------------
+	Main styling
+-----------------------------------------------------------------*/
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $page-background;
+
+    // Main Content Wrapper Styling
+
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 4.5rem 1.5rem;
+        background-image: url(../img/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+
+        @include breakpoints.breakpoint(desktop) { 
+            background-image: url(../img/pattern-background-desktop.svg);
+        }
+    }
+
+    // Main Page Footer Styling
+
+    &-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem 0.5rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            flex-direction: row;
+            padding: 0.7rem 0.5rem;
+        }
+    }
+
+    &-footer__attribution {
+        color: $tertiary-text;
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 500;
+        font-size: 0.9375rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            font-size: 1rem;
+        }
+    }
+
+    &-footer__attribution--has-margin {
+        margin: 0.1rem 0 0 0;
+
+        @include breakpoints.breakpoint(desktop) { 
+            margin: 0 0 0 0.2rem;
+        }
+    }  
+
+    &-footer__attribution-link {
+        color: $cta-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $cta-primary-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Card Styling
+
+.card {
+    max-width: 28.125rem;
+    border-radius: 1.3rem;
+    background-color: $card-background;
+    box-shadow: 0 2.5rem 2.5rem -1.25rem hsla(228, 87%, 40%, 0.17);
+
+    &__aside, &__figure, &__ilustration {
+        border-top-left-radius: 1.3rem;
+        border-top-right-radius: 1.3rem;
+    }
+
+    &__ilustration {
+        display: block;
+        width: 100%;
+    }
+    
+    &__header {
+        padding: 1.7rem 2.5rem 0.75rem 2.5rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            padding: 3.3rem 4.9rem 0.75rem 4.9rem;
+        }
+    }
+ 
+    &__title {
+        color: $tertiary-text;
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 900;
+        font-size: 1.375rem;
+        text-align: center;
+
+        @include breakpoints.breakpoint(desktop) { 
+            font-size: 1.75rem;
+        }
+    }
+    
+    &__short_description {
+        margin-top: 1rem;
+        color: $primary-text;
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 500;
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+        text-align: center;
+
+        @include breakpoints.breakpoint(desktop) { 
+            margin-top: 1.3rem;
+            font-size: 1rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    &__main {
+        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            padding: 0.75rem 3.1rem 1rem 3.1rem;
+        }
+    }
+
+    &__subscription {
+        display: flex;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: $subscription-background;
+
+        @include breakpoints.breakpoint(desktop) { 
+            padding: 1.5rem;
+        }
+    }
+
+    &__subscription-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 1.1rem;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 0.875rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            font-size: 1rem;
+        }
+    }
+
+    &__subscription-type {
+        color: $tertiary-text;      
+        font-weight: 900;
+    }
+
+    &__subscription-price {
+        color: $primary-text;
+        font-weight: 500;
+        letter-spacing: 0.01rem;
+    }
+
+    &__change-button {
+        margin-left: auto;
+        color: $cta-primary;
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        text-decoration: underline;
+
+        &:hover {
+          color: $cta-primary-hover;
+		}
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75rem 1.5rem 1.7rem 1.5rem;
+
+        @include breakpoints.breakpoint(desktop) { 
+            padding: 1rem 3.1rem 3.5rem 3.1rem;
+        }
+    }
+
+    &__proceed-link {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: $secondary-text;
+        background-color: $cta-primary;
+        box-shadow: 0 1.25rem 1.25rem 0 $cta-shadow;
+
+        &:hover {
+			background-color: $cta-primary-hover;
+		}
+    }
+
+    &__cancel-button {
+        margin-top: 1.5rem;
+        color: $primary-text;
+
+        @include breakpoints.breakpoint(desktop) { 
+            margin-top: 2.3rem;
+        }
+    
+        &:hover {
+            color: $tertiary-text;
+        }
+    }
+}

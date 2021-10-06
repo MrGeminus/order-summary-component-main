@@ -1,0 +1,9 @@
+$breakpoint: (
+   'desktop': '90rem',
+);
+
+@mixin breakpoint($value) {
+    @media (min-width: map-get($breakpoint, $value)){
+        @content;
+    }
+}
